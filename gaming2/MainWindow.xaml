@@ -1,0 +1,15 @@
+﻿<Window x:Class="gaming2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gaming2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas x:Name="PlayArea">
+        <Rectangle x:Name="Player" Fill="red" Height="15" Canvas.Left="328" Stroke="Black" Canvas.Top="395" Width="100"/>
+        <Label x:Name="score" Content="0" FontSize="60" Canvas.Left="328" Canvas.Top="175" Height="86" Width="144"/>
+
+
+    </Canvas>
+</Window>
