@@ -31,6 +31,7 @@ namespace gaming2
         bool player_right = false;
         bool player_left = false;
         bool player_none = false;
+       
         bool start_game = false;
         string sMessageBoxTextWon = "you won! do you want to continue?";
         string sMessageBoxTextLost = "you lost do you want to continue?";
@@ -38,6 +39,12 @@ namespace gaming2
         string sCaption = "mini chatch the dots game";
         double y = 0;
         int score1 = 0;
+
+        BitmapImage green = new BitmapImage(new Uri("C:/Users/alex931d/source/repos/gaming2/gaming2/imgs/gray_8bit_image1.jpg"));
+        BitmapImage gray = new BitmapImage(new Uri("C:/Users/alex931d/source/repos/gaming2/gaming2/imgs/green_8bit_image1.jpg"));
+    
+
+        List<BitmapImage> backgrounds = new List<BitmapImage>();
         List<Point> points = new List<Point>();
          DispatcherTimer timer = new DispatcherTimer();
 
@@ -45,7 +52,7 @@ namespace gaming2
         public MainWindow()
         {
 
-            
+           
 
            
 
@@ -53,6 +60,9 @@ namespace gaming2
 
            
             InitializeComponent();
+            backgrounds.Add(gray);
+            backgrounds.Add(green);
+            mainCanvas.Background = new ImageBrush(backgrounds[0]);
             playerRec = Player;
           
           
